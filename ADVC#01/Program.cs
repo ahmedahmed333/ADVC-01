@@ -12,6 +12,38 @@
 
             #endregion
 
+            #region   Q2
+
+            // Q2: Write a generic class Container<T> with Add and Get methods
+
+            Container<int> cont = new Container<int>();
+
+            cont.Add(10);
+            Console.WriteLine(cont.Get()); // 10
+            #endregion
+
+
+            #region   Q3
+            //Q3:What are multiple type parameters? Write Pair<TKey, TValue >.
+            // part one : 
+            // Multiple type params allow a generic class or method to work with more than one data type.
+
+
+            // part two :
+
+            Pair<int, string> pair = new Pair<int, string>(1, "ahmed");
+
+            #endregion
+
+
+            #region   Q4
+            //Q4: What is a generic method? Write Swap<T> method.
+            // A generic method is a method that can work with different data type using a type params 
+
+            //Swap method in Container class
+
+
+            #endregion
 
 
         }
