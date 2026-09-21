@@ -1,4 +1,7 @@
-﻿namespace ADVC_01
+﻿using System.Data;
+using System.Reflection.Metadata;
+
+namespace ADVC_01
 {
     internal class Program
     {
@@ -65,7 +68,52 @@
 
 
             #endregion
+            #region   Q7
+            // Q7: What is the 'struct' constraint? Write an example.
+
+            // The struct constraint specifies that the type params must be a value type.
+            static void print<T>(T value) where T : struct
+            {
+                Console.WriteLine(value);
+            }
+
+
+            #endregion
+
+
+            #region   Q8
+            //Q8: What is the 'class' constraint? Write an example.
+
+            // The class constraint specifies that the type params must be a reference type.
+            static void printClass<T>(T value) where T : class
+            {
+                Console.WriteLine(value);
+            }
+            #endregion
+
+
+            #region   Q9
+            // Q9: What is the 'new()' constraint? Write an example.
+
+            // The new() constraint specifies that the type parameter must have a public parameterless constructor.
+
+            static T Create<T>() where T : new()
+            {
+                return new T();
+            }
+            #endregion
+            #region   Q10
+            //Q10: What is the interface constraint? Write an example.
+
+           
+            // An interface constraint specific that the type params must implement a specific interface.
+            static void  PrintItem<T>(T item) where T : IPrintable
+            {
+                item.Print();
+            }
+        }
+            #endregion
 
         }
-    }
+    
 }
