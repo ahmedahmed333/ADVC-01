@@ -112,14 +112,13 @@ namespace ADVC_01
             {
                 item.Print();
             }
-        }
             #endregion
 
-        #region   Q11
-        // Q11: What is the base class constraint? Write an example.
+            #region   Q11
+            // Q11: What is the base class constraint? Write an example.
 
 
-        // A base class constraint specifies that the type params must be a specific base class or dreive from that base class.
+            // A base class constraint specifies that the type params must be a specific base class or dreive from that base class.
 
 
         class AnimalShelter<T> where T : Animal
@@ -192,16 +191,21 @@ namespace ADVC_01
 
         #region   Q19
         // Q19: How can you inherit from a generic class?
-       
+
         // You can either fix the type parameter (closed) or keep it generic and pass it along (open).
 
         #endregion
 
-        #region   Q20 
-        //Q20: Complete Exercise - Create a generic Cache<TKey TValue>with Add, Get, Remove, Contains, and expiration support.
 
-        #endregion
+
+      
+
 
     }
+
+
+
+
+}
 
 }
