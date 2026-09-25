@@ -168,6 +168,40 @@ namespace ADVC_01
 
 
         #endregion
+
+        #region   Q16 
+        // Q16: What is contravariance? Explain the 'in' keyword. 
+
+        //  Contravariance allows a base type to be used where a derived type is expected, 'in' marks T as input-only.
+
+        #endregion
+
+        #region   Q17 
+        //Q17: What is the difference between covariance and contravariance?
+
+        // Covariance (out) affects return types (derived -> base), contravariance (in) affects parameter types (base -> derived).
+        #endregion
+
+        #region   Q18 
+        //Q18: How do static members work in generic types?
+
+
+        // Each closed generic type (e.g. Counter<int>, Counter<string>) gets its own separate copy of static members.
+
+        #endregion
+
+        #region   Q19
+        // Q19: How can you inherit from a generic class?
+       
+        // You can either fix the type parameter (closed) or keep it generic and pass it along (open).
+
+        #endregion
+
+        #region   Q20 
+        //Q20: Complete Exercise - Create a generic Cache<TKey TValue>with Add, Get, Remove, Contains, and expiration support.
+
+        #endregion
+
     }
 
 }
