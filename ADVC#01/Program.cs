@@ -108,11 +108,12 @@ namespace ADVC_01
 
 
             // An interface constraint specific that the type params must implement a specific interface.
-            static void PrintItem<T>(T item) where T : IPrintable
-            {
-                item.Print();
-            }
+           
             #endregion
+
+
+
+
 
             #region   Q11
             // Q11: What is the base class constraint? Write an example.
@@ -121,11 +122,7 @@ namespace ADVC_01
             // A base class constraint specifies that the type params must be a specific base class or dreive from that base class.
 
 
-        class AnimalShelter<T> where T : Animal
-        {
-            public void announce(T animal) => animal.MakeSound();
-        }
-
+ 
         #endregion
 
 
@@ -134,10 +131,6 @@ namespace ADVC_01
 
         // Multie constraints are chined with commas; new () must always come last;
 
-        class Repository<T> where T : Animal, IIdentifiable, new()
-        {
-            public T CreateNew() => new T();
-        }
 
 
         #endregion
@@ -195,17 +188,16 @@ namespace ADVC_01
         // You can either fix the type parameter (closed) or keep it generic and pass it along (open).
 
         #endregion
-
-
-
-      
-
+            
 
     }
 
 
 
 
+
+
 }
+
 
 }
