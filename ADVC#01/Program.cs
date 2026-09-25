@@ -102,18 +102,72 @@ namespace ADVC_01
                 return new T();
             }
             #endregion
+
             #region   Q10
             //Q10: What is the interface constraint? Write an example.
 
-           
+
             // An interface constraint specific that the type params must implement a specific interface.
-            static void  PrintItem<T>(T item) where T : IPrintable
+            static void PrintItem<T>(T item) where T : IPrintable
             {
                 item.Print();
             }
         }
             #endregion
 
+        #region   Q11
+        // Q11: What is the base class constraint? Write an example.
+
+
+        // A base class constraint specifies that the type params must be a specific base class or dreive from that base class.
+
+
+        class AnimalShelter<T> where T : Animal
+        {
+            public void announce(T animal) => animal.MakeSound();
         }
-    
+
+        #endregion
+
+
+        #region   Q12
+        //Q12: How do you apply multiple constraints? Write an example.
+
+        // Multie constraints are chined with commas; new () must always come last;
+
+        class Repository<T> where T : Animal, IIdentifiable, new()
+        {
+            public T CreateNew() => new T();
+        }
+
+
+        #endregion
+
+
+
+        #region   Q13
+        // Q13: What does the 'default' keyword do in generics?
+
+        //  'default' returs the default value of T : 0 /false for value types ,  null for refernce types
+
+
+        #endregion
+
+
+        #region   Q14
+        //Q14: Write a SafeList<T> that returns default when the index is invalid.
+
+        //SafeList done 
+
+        #endregion
+
+        #region   Q15
+        //Q15: What is covariance? Explain the 'out' keyword.
+
+        // Covariance allows a more derived type to be used where a base type is expected, 'out' marks T as output-only.
+
+
+        #endregion
+    }
+
 }
